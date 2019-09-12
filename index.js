@@ -6,9 +6,16 @@ import {
   FlatList,
   TouchableOpacity
 } from "react-native";
+import PropTypes from "prop-types";
 import { Audio } from "expo-av";
 
 export default class OptionSelector extends React.Component {
+  static propTypes = {
+    selectionColor: PropTypes.string,
+    onPress: PropTypes.func,
+    options: PropTypes.array
+  };
+
   state = {
     selectedOption: ""
   };
