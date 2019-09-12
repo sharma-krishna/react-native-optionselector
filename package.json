@@ -1,0 +1,31 @@
+{
+  "name": "react-native-optionselector",
+  "version": "1.0.0",
+  "description": "A react native option selector to select a option from provided list of options.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharma-krishna/react-native-optionselector.git"
+  },
+  "keywords": [
+    "OptionSelector"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.6.0",
+    "prop-types": "^15.5.10",
+    "expo-av": "^6.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz"
+  },
+  "author": "Krishna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sharma-krishna/react-native-optionselector/issues"
+  },
+  "homepage": "https://github.com/sharma-krishna/react-native-optionselector#readme"
+}
