@@ -15,17 +15,39 @@ export default class OptionSelector extends React.Component {
     onPress: PropTypes.func,
     options: PropTypes.array
   };
-
   state = {
     selectedOption: ""
   };
 
+  validateAns = () => {
+    if (this.state.selectedOption === this.props.correctAnswer) {
+      this.props.onSuccess();
+    } else {
+      this.props.onFailure();
+    }
+  };
+
   renderItem = ({ item }) => {
+    const selected = this.state.selectedOption;
+    const isCorrect = this.props.correctAnswer === item;
+    const itemSelected = this.state.selectedOption === item;
+
+    let backgroundColor = this.props.selectionColor;
+
+    if (selected && itemSelected && isCorrect) {
+      backgroundColor = "green";
+    } else if (selected && itemSelected && !isCorrect) {
+      backgroundColor = "red";
+    } else if (selected && isCorrect) {
+      backgroundColor = "green";
+    }
+
     return (
       <TouchableOpacity
         onPress={async () => {
           this.setState({ selectedOption: item }, () => {
             this.props.onPress(this.state.selectedOption);
+            this.validateAns();
           });
           const soundObject = new Audio.Sound();
           try {
@@ -43,10 +65,7 @@ export default class OptionSelector extends React.Component {
             Style.option,
             {
               elevation: this.state.selectedOption === item ? 3 : 0,
-              backgroundColor:
-                this.state.selectedOption === item
-                  ? this.props.selectionColor
-                  : "#fff"
+              backgroundColor
             }
           ]}
         >

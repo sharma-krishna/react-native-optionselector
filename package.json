@@ -1,6 +1,6 @@
 {
   "name": "react-native-optionselector",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A react native option selector to select a option from provided list of options.",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,6 @@
   ],
   "dependencies": {
     "@babel/runtime": "^7.6.0",
-    "prop-types": "^15.5.10",
     "expo-av": "^6.0.0"
   },
   "peerDependencies": {
