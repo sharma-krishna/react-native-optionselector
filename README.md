@@ -18,3 +18,9 @@ setSelectedOption = option => {
 
 options => takes a list of string where each element of string is an option
 
+onSuccess => takes a function to call when selected answer is equal to correct answer
+
+onFailure => takes a function to call when selected answer is not equal to correct answer
+
+correctAnswer => takes a string containing correct answer
+
